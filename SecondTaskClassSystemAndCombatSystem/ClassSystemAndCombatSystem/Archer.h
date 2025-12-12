@@ -4,6 +4,6 @@
 class Archer :public Player
 {
 public:
-  Archer(string nickname): level {}
+  Archer(string name);
   void attack();
 };

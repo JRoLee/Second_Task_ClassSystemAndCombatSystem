@@ -1,11 +1,19 @@
 #include <iostream>
 #include "Player.h"
 
+Player::Player(string jobname, string name, int level, int hp, int mp,
+               int power, int defence, int accuracy, int speed) 
+               : job_name(jobname), nickname(name),
+                 level(level), HP(hp), MP(mp), power(power), defence(defence),
+                 accuracy(accuracy), speed(speed)
+                 {}
+
 void Player::printPlayerStatus()
 {
   cout << "-------------------------------" << endl;
   cout << "* 현재 능력치" << endl;
   cout << "닉네임: " << nickname << endl;
+  cout << "직업: " << job_name << endl;
   cout << "Lv. " << level << endl;
   cout << "HP: " << HP << endl;
   cout << "MP: " << MP << endl;

@@ -4,7 +4,8 @@ using namespace std;
 class Player
 {
 public:
-  Player(string nickname);
+  Player(string jobname,string name,int level, int hp,int mp,
+          int power,int defence, int accuracy, int speed);
 
   virtual void attack() = 0;
   void printPlayerStatus();

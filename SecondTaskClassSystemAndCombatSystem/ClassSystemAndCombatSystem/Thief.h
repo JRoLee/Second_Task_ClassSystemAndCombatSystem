@@ -4,6 +4,6 @@
 class Thief :public Player
 {
 public:
-  Thief(string nickname);
+  Thief(string name);
   void attack();
 };

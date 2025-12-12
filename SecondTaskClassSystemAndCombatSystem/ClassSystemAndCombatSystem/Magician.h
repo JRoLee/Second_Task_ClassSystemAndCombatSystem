@@ -5,6 +5,6 @@
 class Magician :public Player
 {
 public:
-  Magician(string nickname);
+  Magician(string name);
   void attack();
 };
