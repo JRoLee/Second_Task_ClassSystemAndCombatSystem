@@ -1,15 +1,19 @@
 #include <iostream>
 #include "Player.h"
+#include "Monster.h"
 #include "Warrior.h"
 #include "Magician.h"
 #include "Thief.h"
 #include "Archer.h"
+#include "Goblin.h"
+
 using namespace std;
 
 int main()
 {
   string jobs[] = { "전사","마법사","도적","궁수" };
   int job_choice = 0;
+  int eventChoice = 0;
   string nickname;
 
   Player* player = nullptr;
@@ -48,9 +52,45 @@ int main()
     return 1;
   }
 
-  player->attack();
-  player->printPlayerStatus();
+  cout << "축하합니다! " << player->gentJobName() << "으로 전직 하셨습니다!" << endl;
+  //선택지 출력
+  cout << "다음 활동을 선택해 주세요! \n1) 전투 \n2) 상태창 \n3) 모험 종료" << endl;
+  
+  Monster* monster = nullptr;
+  monster = new Goblin;
 
+  while (true)
+  {
+    cout << "선택: ";
+    cin >> eventChoice;
+    switch (eventChoice)
+    {
+    case 1:
+     
+      if (player->getSpeed() >= monster->getSpeed())
+      {
+        player->attack(monster);
+        monster->attack(player);
+      }
+      else
+      {
+        monster->attack(player);
+        player->attack(monster);
+      }
+      break;
+
+    case 2:
+      player->printPlayerStatus();
+      break;
+
+    case 3:
+      cout << "모험을 종료합니다!" << endl;
+      
+      return 0;
+    }
+  }
+ 
+ 
   if (player != nullptr)
     delete player;
 

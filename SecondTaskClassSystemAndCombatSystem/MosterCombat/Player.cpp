@@ -31,7 +31,7 @@ int Player::getLevel() { return level; }
 int Player::getHP() { return HP; }
 int Player::getMP() { return MP; }
 int Player::getPower() { return power; }
-int Player::getDefnece() { return defence; }
+int Player::getDefence() { return defence; }
 int Player::getAccuracy() { return accuracy; }
 int Player::getSpeed() { return speed; }
 

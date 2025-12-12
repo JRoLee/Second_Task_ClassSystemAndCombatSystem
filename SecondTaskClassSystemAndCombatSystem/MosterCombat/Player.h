@@ -1,13 +1,17 @@
 #pragma once
 #include <string>
+
 using namespace std;
+
+class Monster;
+
 class Player
 {
 public:
   Player(string jobname,string name,int level, int hp,int mp,
           int power,int defence, int accuracy, int speed);
 
-  virtual void attack() = 0;
+  virtual void attack(Monster* monster) = 0;
   void printPlayerStatus();
 
   //getter
@@ -17,7 +21,7 @@ public:
   int getHP();
   int getMP();
   int getPower();
-  int getDefnece();
+  int getDefence();
   int getAccuracy();
   int getSpeed();
 
