@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/SecondTaskClassSystemAndCombatSystem/SecondTaskClassSystemAndCombatSystem.sln
+/SecondTaskClassSystemAndCombatSystem/ClassSystemAndCombatSystem/ClassSystemAndCombatSystem.vcxproj
+/SecondTaskClassSystemAndCombatSystem/ClassSystemAndCombatSystem/ClassSystemAndCombatSystem.vcxproj.filters
