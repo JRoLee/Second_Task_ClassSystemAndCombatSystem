@@ -13,15 +13,15 @@ void Goblin::attack(Player* player)
   {
     dmg = 1;
   }
-  int pHPchange = player->getHP() - dmg;
-  if (pHPchange < 0)
+  int ObjHPchange = player->getHP() - dmg;
+  if (ObjHPchange < 0)
   {
-    pHPchange = 0;
+    ObjHPchange = 0;
   }
 
   cout << name << "이 " << player->getNickName() << " 을(를) 공격 했습니다." << endl;
   cout << "!!!" << dmg << "!!!" << endl;
   cout << dmg << "만큼 피해를 입었습니다." << endl;
-  cout << "플레이어 HP: " << player->getHP() << " -> " << pHPchange << endl;
-  player->setHP(pHPchange);
+  cout << "플레이어 HP: " << player->getHP() << " -> " << ObjHPchange << endl;
+  player->setHP(ObjHPchange);
 }
