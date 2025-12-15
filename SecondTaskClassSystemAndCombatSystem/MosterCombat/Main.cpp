@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Event.h"
 #include "Player.h"
 #include "Monster.h"
 #include "Warrior.h"
@@ -6,15 +7,19 @@
 #include "Thief.h"
 #include "Archer.h"
 #include "Goblin.h"
+#include "Gargoyle.h"
+#include "Orc.h"
 
 using namespace std;
 
 int main()
 {
+  srand((unsigned)time(nullptr));
   string jobs[] = { "전사","마법사","도적","궁수" };
   int job_choice = 0;
   int eventChoice = 0;
   string nickname;
+  Event event;
 
   Player* player = nullptr;
 
@@ -56,9 +61,6 @@ int main()
   //선택지 출력
   cout << "다음 활동을 선택해 주세요! \n1) 전투 \n2) 상태창 \n3) 모험 종료" << endl;
   
-  Monster* monster = nullptr;
-  monster = new Goblin;
-
   while (true)
   {
     cout << "선택: ";
@@ -66,16 +68,10 @@ int main()
     switch (eventChoice)
     {
     case 1:
-     
-      if (player->getSpeed() >= monster->getSpeed())
+      event.battleEvent(player);
+      if (player->getHP() <= 0)
       {
-        player->attack(monster);
-        monster->attack(player);
-      }
-      else
-      {
-        monster->attack(player);
-        player->attack(monster);
+        return 0;
       }
       break;
 

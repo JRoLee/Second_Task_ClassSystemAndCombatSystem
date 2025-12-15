@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#include "Goblin.h"
+#include "Gargoyle.h"
 #include "Player.h"
 
-Goblin::Goblin():Monster("고블린",50,30,10,12){}
+Gargoyle::Gargoyle() :Monster("가고일", 300, 50, 55, 8) {}
 
-void Goblin::attack(Player* player)
+void Gargoyle::attack(Player* player)
 {
 
   int dmg = power - player->getDefence();

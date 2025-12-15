@@ -1,14 +1,14 @@
 #pragma once
+#include <memory>
 #include "Player.h"
 #include "Monster.h"
 
 class Event
 {
 public:
-  void spawnMonster();
-  void victoryEvent();
-  void defeatEvent();
+  unique_ptr<Monster> spawnMonster();
+  void victoryEvent(Monster* monster);
+  void defeatEvent(Player* player);
   void fleeEvent();
-
-protected:
+  void battleEvent(Player* player);
 };

@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-#include "Goblin.h"
+#include "Orc.h"
 #include "Player.h"
 
-Goblin::Goblin():Monster("고블린",50,30,10,12){}
+Orc::Orc() :Monster("오크", 200, 40, 20, 10) {}
 
-void Goblin::attack(Player* player)
+void Orc::attack(Player* player)
 {
 
   int dmg = power - player->getDefence();
