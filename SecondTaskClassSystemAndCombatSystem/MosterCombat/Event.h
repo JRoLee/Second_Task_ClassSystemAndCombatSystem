@@ -11,4 +11,6 @@ public:
   void defeatEvent(Player* player);
   void fleeEvent();
   void battleEvent(Player* player);
+  int battleChoice();
+  void statusCompare(Player* player, Monster* monster);
 };
