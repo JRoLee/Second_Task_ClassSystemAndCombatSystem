@@ -6,7 +6,7 @@ using namespace std;
 
 Warrior::Warrior(string name) : Player("ภüป็", name, 1, 120, 80, 40, 20, 70, 10) {}
 
-void Warrior::attack(Monster* monster)
+void Warrior::attack(shared_ptr<Monster> monster)
 {
   int dmg = floor(power - monster->getDefence());
   if (dmg <= 0)

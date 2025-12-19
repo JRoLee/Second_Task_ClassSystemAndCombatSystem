@@ -6,7 +6,7 @@ using namespace std;
 
 Archer::Archer(string name) : Player("±Ã¼ö", name, 1, 90, 110, 50, 10, 100, 15) {}
 
-void Archer::attack(Monster* monster)
+void Archer::attack(shared_ptr<Monster> monster)
 {
   int dmg = floor((power - monster->getDefence()) / 3);
   if (dmg <= 0)

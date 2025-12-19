@@ -6,7 +6,7 @@ using namespace std;
 
 Thief::Thief(string name) : Player("µµÀû", name, 1, 90, 110, 65, 5, 90, 20) {}
 
-void Thief::attack(Monster* monster)
+void Thief::attack(shared_ptr<Monster> monster)
 {
   int dmg = floor((power - monster->getDefence()) / 5);
   if (dmg <= 0)

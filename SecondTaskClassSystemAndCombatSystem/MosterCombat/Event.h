@@ -6,11 +6,12 @@
 class Event
 {
 public:
-  unique_ptr<Monster> spawnMonster();
-  void victoryEvent(Monster* monster);
+  shared_ptr<Monster> spawnMonster();
+  Player* SetPlayer();
+  void victoryEvent(shared_ptr<Monster> monster);
   void defeatEvent(Player* player);
   void fleeEvent();
   void battleEvent(Player* player);
-  int battleChoice();
-  void statusCompare(Player* player, Monster* monster);
+  void battleChoice(Player* player, shared_ptr<Monster> monster);
+  void statusCompare(Player* player, shared_ptr<Monster> monster);
 };

@@ -7,5 +7,5 @@ class Thief :public Player
 {
 public:
   Thief(string name);
-  void attack(Monster* monster);
+  void attack(shared_ptr<Monster> monster);
 };

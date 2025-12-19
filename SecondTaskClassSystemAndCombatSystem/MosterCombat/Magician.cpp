@@ -6,7 +6,7 @@ using namespace std;
 
 Magician::Magician(string name): Player("¸¶¹ý»ç", name, 1, 70, 130, 60, 7, 80, 8){}
 
-void Magician::attack(Monster* monster)
+void Magician::attack(shared_ptr<Monster> monster)
 {
   int dmg = floor(power - monster->getDefence());
   if (dmg <= 0)

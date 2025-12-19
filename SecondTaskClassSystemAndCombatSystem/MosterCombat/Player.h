@@ -11,7 +11,7 @@ public:
   Player(string jobname,string name,int level, int hp,int mp,
           int power,int defence, int accuracy, int speed);
 
-  virtual void attack(Monster* monster) = 0;
+  virtual void attack(shared_ptr<Monster> monster) = 0;
   void printPlayerStatus();
 
   //getter

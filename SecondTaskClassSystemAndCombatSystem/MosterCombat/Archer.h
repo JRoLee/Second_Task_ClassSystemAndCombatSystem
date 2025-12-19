@@ -7,5 +7,5 @@ class Archer :public Player
 {
 public:
   Archer(string name);
-  void attack(Monster* monster);
+  void attack(shared_ptr<Monster> monster);
 };
